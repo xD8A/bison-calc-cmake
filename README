@@ -5,15 +5,16 @@ Example".  It is also available on line (maybe with a different version of
 Bison):
 https://www.gnu.org/software/bison/manual/html_node/A-Complete-C_002b_002b-Example.html
 
-To use it, copy this directory into some work directory, and run `cmake && make` to
-compile the executable, and try it.  It is a simple calculator which accepts
+To use it, copy this directory into some work directory, and run 
+`cmake -Bbuild -S. && cd build && make` 
+to compile the executable, and try it.  It is a simple calculator which accepts
 several variable definitions, one per line, and then a single expression to
 evaluate.
 
 The program calc++ expects the file to parse as argument; pass `-` to read
 the standard input (and then hit <Ctrl-d>, control-d, to end your input).
 
-$ ./calc++ -
+$ ./build/src/calc -
 one := 1
 two := 2
 three := 3
